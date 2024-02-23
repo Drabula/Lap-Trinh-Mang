@@ -7,20 +7,24 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client extends JFrame {
+     //1571020177
     private static final String SERVER_ADDRESS = "localhost";
+     //1571020177
     private static final int SERVER_PORT = 44444;
-
+     //1571020177
     private Socket socket;
+     //1571020177
     private PrintWriter writer;
     private String name;
-
+     //1571020177
     private JTextArea chatArea;
-    private JTextField messageField;
+    private JTextField Msv1571020177;
     private JList<String> fileList;
     private DefaultListModel<String> listModel;
     private JButton sendFileButton;
 
     public Client() {
+         //1571020177
         // Hộp thoại để người dùng nhập tên
         name = JOptionPane.showInputDialog("Enter your name:");
 
@@ -41,8 +45,8 @@ public class Client extends JFrame {
         chatArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(chatArea);
 
-        messageField = new JTextField();
-        messageField.addActionListener(new SendMessageListener());
+        Msv1571020177 = new JTextField();
+        Msv1571020177.addActionListener(new SendMessageListener());
 
         JButton sendButton = new JButton("Send");
         sendButton.addActionListener(new SendMessageListener());
@@ -58,7 +62,7 @@ public class Client extends JFrame {
         layout.setHorizontalGroup(layout.createSequentialGroup()
             .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                 .addComponent(scrollPane)
-                .addComponent(messageField))
+                .addComponent(Msv1571020177))
             .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                 .addComponent(sendButton)
                 .addComponent(sendFileButton)
@@ -71,7 +75,7 @@ public class Client extends JFrame {
                     .addComponent(sendButton)
                     .addComponent(sendFileButton)
                     .addComponent(fileListScrollPane)))
-            .addComponent(messageField));
+            .addComponent(Msv1571020177));
 
         setVisible(true);
 
@@ -79,6 +83,7 @@ public class Client extends JFrame {
         startReading();
     }
     private class SendFileListener implements ActionListener {
+         //1571020177
         @Override
         public void actionPerformed(ActionEvent e) {
             JFileChooser fileChooser = new JFileChooser();
@@ -102,6 +107,7 @@ public class Client extends JFrame {
     }
 
     private void connectToServer() {
+         //1571020177
         try {
             socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
             writer = new PrintWriter(socket.getOutputStream(), true);
@@ -112,6 +118,7 @@ public class Client extends JFrame {
     }
 
     private void startReading() {
+         //1571020177
         Thread readThread = new Thread(() -> {
             try {
                 Scanner serverScanner = new Scanner(socket.getInputStream());
@@ -133,15 +140,17 @@ public class Client extends JFrame {
     }
 
     private class SendMessageListener implements ActionListener {
+         //1571020177
         @Override
         public void actionPerformed(ActionEvent e) {
-            String message = messageField.getText();
+            String message = Msv1571020177.getText();
             writer.println(name + ": " + message); // Gửi tin nhắn với tên của người gửi
-            messageField.setText("");
+            Msv1571020177.setText("");
         }
     }
 
     public static void main(String[] args) {
+         //1571020177
         SwingUtilities.invokeLater(() -> new Client());
     }
 }
