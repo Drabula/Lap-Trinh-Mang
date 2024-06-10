@@ -6,10 +6,7 @@ package clientcaro;
 
 import java.util.Vector;
 
-/**
- *
- * @author ltphong
- */
+
 public class address {
 
     public static Vector<Integer> port1 = new Vector<Integer>();

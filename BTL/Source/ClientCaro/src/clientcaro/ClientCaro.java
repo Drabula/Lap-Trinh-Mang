@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package clientcaro;
 
 import java.io.DataInputStream;
@@ -10,10 +7,6 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-/**
- *
- * @author ltphong
- */
 public class ClientCaro {
 
     /**

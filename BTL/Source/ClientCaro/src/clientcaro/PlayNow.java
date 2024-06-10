@@ -13,10 +13,6 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 
-/**
- *
- * @author Kien
- */
 public class PlayNow extends Thread {
 
     private JPanel user;

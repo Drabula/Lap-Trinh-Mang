@@ -7,10 +7,7 @@ package clientcaro;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
-/**
- *
- * @author ltphong
- */
+
 public class Loginfail extends javax.swing.JFrame {
 
 

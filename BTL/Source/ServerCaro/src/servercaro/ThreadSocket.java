@@ -1,13 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package servercaro;
 
-/**
- *
- * @author ltphong
- */
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
